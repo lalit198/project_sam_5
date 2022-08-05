@@ -10,7 +10,7 @@ li{list-style: none;}
     justify-content: space-between;
     /* padding: .5rem 1rem; */
     position: fixed;
-    top: .5rem;
+    top: 0;
     left: 0;
     right: 0;
     width: 100vw;
@@ -139,8 +139,8 @@ li{list-style: none;}
 }
 
 input:checked + .slider {
-  background-color: rgb(72, 180, 123);
-  border-color: rgb(72, 180, 123);
+  background-color: purple;
+  border-color: purple;
 }
 
 input:focus + .slider {
@@ -290,8 +290,8 @@ input:checked + .slider:before {
 }
 .dashboard_banner_content img{
     position: absolute;
-    width: 142px;
-    height: 150px;
+    width: 130px;
+    height: 143px;
     right: 1rem;
     top: 1rem;
 }
@@ -366,11 +366,28 @@ input:checked + .slider:before {
 
 }
 
-.menu_item_icon img{
-    width: 4.712125rem;
-    height: 4.712125rem;
-    border-radius: 2.37rem;
-    margin: 0 2.8125rem .66rem 2.8125rem;
+.menu_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu_item_icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    padding: 1.8rem;
+    position: relative;
+}
+.menu_item_icon i{
+    font-size: 1.5rem;
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .menu_item_text{
     font-size: .825rem;
@@ -378,6 +395,7 @@ input:checked + .slider:before {
     font-weight: 400;
     color: #2a2a2a;
     text-align: center;
+    margin-top: .5rem;
 }
 
 
@@ -391,7 +409,7 @@ input:checked + .slider:before {
     align-items: center;
 }
 .amount_info{
-    padding: 1rem 0.26rem 1rem 0.26rem;
+    padding: 1rem 0.26rem 1rem 1rem;
     height: 16.226rem;
     background-color: #FFF;
     border-radius: 10px;
@@ -409,12 +427,13 @@ input:checked + .slider:before {
     font-size: 1.35rem;
     line-height: 1.35rem;
     font-weight: 700;
-    color: #282828;
+    color: #FFF;
     margin: 0;
     max-width: 10.38rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align: left;
 
 }
 .amount_balance span{
@@ -422,11 +441,11 @@ input:checked + .slider:before {
     display: inline-block;
     vertical-align: text-top;
     font-weight: 400;
-    color: #282828;
+    color: #FFF;
     font-size: .78rem;
 }
 .amount_title{
-    color: #999;
+    color: #FFF;
     text-align: left;
     margin: 5px 0;
     font-size: 1.26rem;
@@ -434,7 +453,7 @@ input:checked + .slider:before {
     line-height: 1.26rem;
 }
 .amount_account{
-    color: #999;
+    color: #FFF;
     text-align: left;
     font-size: .78rem;
     line-height: .78rem;
@@ -761,7 +780,8 @@ input:checked + .slider:before {
     position: relative;
     font-weight: 800;
     color: #feffff;
-    background-color: #27ad9b;
+    background: url(../images/photo-1557682250-33bd709cbe85.jpg);
+    background-size: 100%;
     z-index: 3;
 }
 .investlisting_box_parent{
@@ -801,8 +821,8 @@ input:checked + .slider:before {
     width: 93%
 }
 .investpro_top_box{
-background-color: #40afff;
-    background-image: linear-gradient(45deg,#40afff,#3574fa);
+    background-color: #2876f9;
+    background-image: linear-gradient(315deg, #2876f9 0%, #6d17cb 74%);  
     color: #fff;
     border-radius: 5px;
     padding: 15px;
@@ -984,19 +1004,16 @@ background-color: #40afff;
         width: 49%;
         height: auto;
         text-align: center;
+        position: relative;
     }
     .amount_balance {
         max-width: 30.38rem;
     }
-    .amount_title {
-        text-align: center;
-    }
+ 
     .amount_info img {
         margin: 2.02rem 7.684rem 1.68rem 7.684rem;
     }
-    .amount_account {
-        text-align: center;
-    }
+   
 
 
     /*------------------------ Deposit Code Starts -----------------------*/
